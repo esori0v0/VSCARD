@@ -9,8 +9,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 32px;
-  background: #fdfee1;
+
+  /* 페이지 배경 흰색 */
+  background: #ffffff;
+
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -20,18 +24,26 @@ body {
 }
 
 .card {
-  width: min(960px, 100%);
-  min-height: 430px;
+  /* 기존보다 살짝 크게 */
+  width: min(1080px, 100%);
+  min-height: 540px;
+
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 56px;
+
   background: #fdfee1;
+
   border: 2px solid #ffffff;
+
   border-radius: 32px;
-  padding: 48px;
+
+  padding: 56px;
+
   box-shadow:
     0 18px 45px rgba(0, 0, 0, 0.12),
     0 0 24px rgba(255, 255, 255, 0.55);
+
   text-align: center;
 }
 
@@ -53,81 +65,124 @@ body {
 
 /* 프로필 */
 .profile {
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 28px;
+  width: 190px;
+  height: 190px;
+
+  margin: 0 auto 30px;
+
   border-radius: 50%;
+
   overflow: hidden;
+
   border: 4px solid #ffffff;
+
   background: #fff8fc;
 }
 
 .profile img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
   object-position: center center;
+
   display: block;
 }
 
 /* 이름 */
 .name {
-  font-size: 43px;
+  font-size: 45px;
+
   font-weight: 800;
+
   color: #2a2130;
+
   letter-spacing: -1px;
-  margin-bottom: 12px;
+
+  margin-bottom: 14px;
 }
 
 /* 직군 */
 .job {
   display: inline-block;
-  padding: 10px 22px;
+
+  padding: 11px 24px;
+
   background: #fff8fc;
+
   color: #b43b7e;
+
   border: 1px solid #ffffff;
+
   border-radius: 999px;
-  font-size: 15px;
+
+  font-size: 16px;
+
   font-weight: 600;
 }
 
 /* 연락처 */
 .info {
   display: flex;
+
   flex-direction: column;
-  gap: 18px;
-  margin-bottom: 24px;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
 }
 
 .item {
   display: flex;
+
   align-items: center;
-  gap: 16px;
-  padding: 22px;
-  border-radius: 22px;
+
+  gap: 18px;
+
+  padding: 24px;
+
+  border-radius: 24px;
+
   background: #fffdf4;
+
   border: 1px solid #ece7d5;
-  transition: all 0.2s ease;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .item:hover {
   transform: translateY(-3px);
+
   border-color: #ffffff;
+
   box-shadow:
     0 0 18px rgba(255, 255, 255, 0.45),
     0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .icon {
-  width: 56px;
-  height: 56px;
+  width: 58px;
+
+  height: 58px;
+
   border-radius: 18px;
+
   background: #fff8fc;
+
   border: 1px solid #ffffff;
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
-  font-size: 26px;
+
+  font-size: 27px;
+
   flex-shrink: 0;
 }
 
@@ -137,18 +192,23 @@ body {
 
 .label {
   color: #8c8592;
+
   font-size: 13px;
+
   margin-bottom: 4px;
 }
 
 .value {
   color: #2a2130;
+
   font-size: 18px;
+
   font-weight: 700;
 }
 
 a {
   color: inherit;
+
   text-decoration: none;
 }
 
@@ -159,27 +219,43 @@ a:hover {
 /* 링크 버튼 */
 .button-group {
   display: flex;
+
   justify-content: center;
-  gap: 14px;
-  margin-bottom: 28px;
+
+  gap: 16px;
+
+  margin-bottom: 30px;
 }
 
 .link-button {
   display: inline-flex;
+
   justify-content: center;
+
   align-items: center;
-  width: 190px;
-  min-height: 54px;
-  padding: 14px 18px;
+
+  width: 205px;
+
+  min-height: 58px;
+
+  padding: 15px 20px;
+
   background: #fff8fc;
+
   border: 1px solid #ffffff;
-  border-radius: 16px;
+
+  border-radius: 18px;
+
   color: #2a2130;
+
   font-size: 17px;
+
   font-weight: 800;
+
   box-shadow:
     0 0 16px rgba(255, 255, 255, 0.35),
     0 10px 24px rgba(0, 0, 0, 0.08);
+
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
@@ -189,21 +265,27 @@ a:hover {
 
 .link-button:hover {
   transform: translateY(-3px);
+
   background: #ffffff;
+
   border-color: #ffffff;
+
   box-shadow:
     0 0 20px rgba(255, 255, 255, 0.5),
     0 12px 28px rgba(0, 0, 0, 0.12);
+
   text-decoration: none;
 }
 
 .link-button:focus-visible {
   outline: 3px solid rgba(255, 255, 255, 0.65);
+
   outline-offset: 4px;
 }
 
 .footer {
   color: #8c8592;
+
   font-size: 14px;
 }
 
@@ -214,11 +296,19 @@ a:hover {
   }
 
   .card {
-    width: min(420px, 100%);
+    width: min(430px, 100%);
     min-height: auto;
+
     flex-direction: column;
+
     gap: 36px;
+
     padding: 40px 24px;
+  }
+
+  .profile {
+    width: 180px;
+    height: 180px;
   }
 
   .name {
