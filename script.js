@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("mouseenter", () => {
       card.style.transform = "translateY(-10px)";
       card.style.boxShadow =
-        "0 0 35px rgba(238, 83, 163, 0.28), 0 28px 70px rgba(0, 0, 0, 0.65)";
+        "0 24px 60px rgba(0, 0, 0, 0.22), 0 0 32px rgba(255, 255, 255, 0.42)";
     });
 
     card.addEventListener("mouseleave", () => {
       card.style.transform = "translateY(0)";
       card.style.boxShadow =
-        "0 0 25px rgba(238, 83, 163, 0.15), 0 20px 50px rgba(0, 0, 0, 0.45)";
+        "0 18px 45px rgba(0, 0, 0, 0.18), 0 0 24px rgba(255, 255, 255, 0.28)";
     });
   }
 
@@ -42,13 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const githubButton = document.querySelector(".github-button");
-
-  if (githubButton) {
-    githubButton.addEventListener("click", () => {
-      console.log("GitHub 페이지로 이동합니다.");
+  document.querySelectorAll(".link-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log(`${button.textContent.trim()} 링크로 이동합니다.`);
     });
-  }
+  });
 });
 
 function copyFallback(text) {
