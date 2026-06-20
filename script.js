@@ -41,6 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  const githubButton = document.querySelector(".github-button");
+
+  if (githubButton) {
+    githubButton.addEventListener("click", () => {
+      console.log("GitHub 페이지로 이동합니다.");
+    });
+  }
 });
 
 function copyFallback(text) {
